@@ -1,0 +1,25 @@
+<%= form_for(@esc) do |f| %>
+  <% if @esc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@esc.errors.count, "error") %> prohibited this esc from being saved:</h2>
+
+      <ul>
+      <% @esc.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :controller_name %><br />
+    <%= f.text_field :controller_name %>
+  </div>
+  <div class="field">
+    <%= f.label :controller_reference %><br />
+    <%= f.text_field :controller_reference %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module EscsHelper
+end

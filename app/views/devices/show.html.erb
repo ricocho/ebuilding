@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Device name:</b>
+  <%= @device.device_name %>
+</p>
+
+<p>
+  <b>Device reference:</b>
+  <%= @device.device_reference %>
+</p>
+
+<p>
+  <b>Device instance number:</b>
+  <%= @device.device_instance_number %>
+</p>
+
+<p>
+  <b>Device description:</b>
+  <%= @device.device_description %>
+</p>
+
+<b>Device Trends:</b>
+<table>
+<%= render @datasources %>
+</table>
+
+</br>
+<%= link_to 'List All ESCs', escs_path %> | <%= link_to 'Back to ESC', esc_path(@device.controller_id) %>
+

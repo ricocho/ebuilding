@@ -1,0 +1,42 @@
+<h1>Listing datasources</h1>
+
+<table>
+  <tr>
+    <th>Controller</th>
+    <th>Device</th>
+    <th>Datasource instance number</th>
+    <th>Datasource type</th>
+    <th>Datasource type name</th>
+    <th>Datasource property</th>
+    <th>Datasource property name</th>
+    <th>Datasource reference</th>
+    <th>Datasource name</th>
+    <th>Datasource description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @datasources.each do |datasource| %>
+  <tr>
+    <td><%= datasource.controller_id %></td>
+    <td><%= datasource.device_id %></td>
+    <td><%= datasource.datasource_instance_number %></td>
+    <td><%= datasource.datasource_type %></td>
+    <td><%= datasource.datasource_type_name %></td>
+    <td><%= datasource.datasource_property %></td>
+    <td><%= datasource.datasource_property_name %></td>
+    <td><%= datasource.datasource_reference %></td>
+    <td><%= datasource.datasource_name %></td>
+    <td><%= datasource.datasource_description %></td>
+    <td><%= link_to 'Show', datasource %></td>
+    <td><%= link_to 'Edit', edit_datasource_path(datasource) %></td>
+    <td><%= link_to 'Destroy', datasource, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Datasource', new_datasource_path %>
+

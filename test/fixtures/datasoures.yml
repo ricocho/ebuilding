@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  controller_id: 1
+  device_id: 1
+  datasource_instance_number: 1
+  datasource_type: 1
+  datasource_type_name: MyString
+  datasource_property: MyString
+  datasource_property_name: MyString
+  datasource_refrence: MyString
+  datasource_name: MyString
+  datasource_description: MyString
+
+two:
+  controller_id: 1
+  device_id: 1
+  datasource_instance_number: 1
+  datasource_type: 1
+  datasource_type_name: MyString
+  datasource_property: MyString
+  datasource_property_name: MyString
+  datasource_refrence: MyString
+  datasource_name: MyString
+  datasource_description: MyString
