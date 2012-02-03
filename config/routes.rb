@@ -1,4 +1,14 @@
 Ebuilding::Application.routes.draw do
+  resources :escs do
+    resources :datasources, :devices
+  end
+
+  resources :devices do
+    resources :datasources
+  end
+
+  resources :datasources
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -56,3 +66,4 @@ Ebuilding::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 end
+
